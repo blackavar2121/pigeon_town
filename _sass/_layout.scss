@@ -5,18 +5,28 @@
   padding: 1.5rem 2rem;
   border-bottom: none;
   background: $iridescent-purple;
-}
 
-.header-inner {
-  max-width: 960px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+  .header-inner {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
 
-.site-nav {
-  a {
+  .site-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: $cream;
+    letter-spacing: 0.01em;
+
+    &:hover {
+      color: $gray-pale;
+    }
+  }
+
+  .site-nav a {
     color: $gray-pale;
     font-size: 0.9rem;
     margin-left: 1.25rem;
@@ -24,18 +34,6 @@
     &:hover {
       color: #fff;
     }
-  }
-}
-
-.site-title {
-  font-family: 'Playfair Display', Georgia, serif;
-  font-size: 1.5rem;
-  font-weight: 500;
-  color: $cream;
-  letter-spacing: 0.01em;
-
-  &:hover {
-    color: $gray-pale;
   }
 }
 
