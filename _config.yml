@@ -1,8 +1,8 @@
 title: Pigeon Town
 description: >-
   A photoblog about pigeons, around the city and elsewhere.
-baseurl: "" # set to repo name for GitHub Pages, e.g. /pigeon-town
-url: "" # set to your GitHub Pages URL, e.g. https://username.github.io
+baseurl: "/pigeon_town"
+url: "https://blackavar2121.github.io"
 
 # Flickr
 flickr_username: blackavar21
