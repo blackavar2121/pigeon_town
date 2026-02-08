@@ -29,6 +29,14 @@ layout: default
     </div>
     {% endif %}
 
+    {% if page.tags.size > 0 %}
+    <div class="post-tags">
+      {% for tag in page.tags %}
+      <a href="{{ '/tags/' | relative_url }}#{{ tag | slugify }}" class="tag-pill">{{ tag }}</a>
+      {% endfor %}
+    </div>
+    {% endif %}
+
     <a href="https://www.flickr.com/photos/{{ site.flickr_username }}/{{ page.flickr_id }}" class="flickr-link" target="_blank" rel="noopener">View on Flickr</a>
   </div>
 

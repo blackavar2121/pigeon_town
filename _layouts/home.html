@@ -24,6 +24,13 @@ layout: default
         {% if post.location %}
         <span class="location">{{ post.location }}</span>
         {% endif %}
+        {% if post.tags.size > 0 %}
+        <div class="card-tags">
+          {% for tag in post.tags %}
+          <a href="{{ '/tags/' | relative_url }}#{{ tag | slugify }}" class="tag-pill-sm">{{ tag }}</a>
+          {% endfor %}
+        </div>
+        {% endif %}
       </div>
     </article>
     {% endfor %}

@@ -6,5 +6,6 @@ location: ""
 flickr_id: ""
 flickr_server: ""
 flickr_secret: ""
+tags: []
 ---
 

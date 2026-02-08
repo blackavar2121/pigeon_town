@@ -1,0 +1,38 @@
+---
+layout: default
+title: Tags
+permalink: /tags/
+---
+
+<div class="tags-page">
+  <h1 class="page-title">Tags</h1>
+
+  <div class="tag-cloud">
+    {% assign sorted_tags = site.tags | sort %}
+    {% for tag in sorted_tags %}
+    <a href="#{{ tag[0] | slugify }}" class="tag-pill">{{ tag[0] }} <span class="tag-count">{{ tag[1].size }}</span></a>
+    {% endfor %}
+  </div>
+
+  {% for tag in sorted_tags %}
+  <section class="tag-group" id="{{ tag[0] | slugify }}">
+    <h2 class="tag-name">{{ tag[0] }}</h2>
+    <ul class="tag-posts">
+      {% for post in tag[1] %}
+      <li>
+        <a href="{{ post.url | relative_url }}">
+          {% if post.flickr_id %}
+          <img
+            src="https://live.staticflickr.com/{{ post.flickr_server }}/{{ post.flickr_id }}_{{ post.flickr_secret }}_q.jpg"
+            alt="{{ post.title }}"
+            class="tag-thumb">
+          {% endif %}
+          <span class="tag-post-title">{{ post.title }}</span>
+        </a>
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endfor %}
+</div>
