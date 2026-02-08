@@ -6,7 +6,7 @@ location: "Downtown"
 flickr_id: "55085333385"
 flickr_server: "65535"
 flickr_secret: "f5912b6457"
-tags: [solo, steps]
+tags: [nyc,winter]
 ---
 
 Spotted this one taking a break on the library steps. Seemed unbothered.
