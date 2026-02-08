@@ -1,0 +1,287 @@
+@use "variables" as *;
+
+// Header
+.site-header {
+  padding: 1.5rem 2rem;
+  border-bottom: none;
+  background: $iridescent-purple;
+}
+
+.header-inner {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.site-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: $cream;
+  letter-spacing: 0.01em;
+
+  &:hover {
+    color: $gray-pale;
+  }
+}
+
+// Main
+.site-main {
+  flex: 1;
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+// Home / photo feed
+.intro {
+  margin-bottom: 2.5rem;
+  color: $text-mid;
+  font-size: 1.05rem;
+}
+
+.photo-feed {
+  display: grid;
+  gap: 2.5rem;
+}
+
+.photo-card {
+  background: $bg-card;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.2s ease;
+
+  &:hover {
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  img {
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+  }
+}
+
+.photo-card-info {
+  padding: 1rem 1.25rem 1.25rem;
+
+  h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 0.35rem;
+
+    a {
+      color: $text-dark;
+
+      &:hover {
+        color: $iridescent-purple;
+      }
+    }
+  }
+
+  time {
+    font-size: 0.85rem;
+    color: $text-light;
+  }
+
+  .location {
+    font-size: 0.85rem;
+    color: $text-light;
+
+    &::before {
+      content: " · ";
+    }
+  }
+}
+
+// Single post
+.post {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.post-photo {
+  margin: 0 -2rem 2rem;
+  background: $gray-dark;
+
+  img {
+    width: 100%;
+    max-height: 75vh;
+    object-fit: contain;
+    margin: 0 auto;
+  }
+
+  @media (min-width: 640px) {
+    margin: 0 0 2rem;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+}
+
+.post-info {
+  max-width: 640px;
+}
+
+.post-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.75rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.post-meta {
+  font-size: 0.9rem;
+  color: $text-light;
+  margin-bottom: 1.5rem;
+
+  .location::before {
+    content: " · ";
+  }
+}
+
+.post-content {
+  color: $text-mid;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+
+  p + p {
+    margin-top: 1rem;
+  }
+}
+
+.flickr-link {
+  display: inline-block;
+  font-size: 0.85rem;
+  color: $text-light;
+  border: 1px solid $border-mid;
+  padding: 0.4rem 0.8rem;
+  border-radius: 3px;
+  transition: all 0.2s ease;
+
+  &:hover {
+    color: $iridescent-purple;
+    border-color: $iridescent-purple;
+  }
+}
+
+// Post navigation
+.post-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid $border-light;
+  font-size: 0.9rem;
+
+  a {
+    color: $text-mid;
+
+    &:hover {
+      color: $iridescent-purple;
+    }
+  }
+
+  .post-nav-next {
+    margin-left: auto;
+  }
+}
+
+// Pagination
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid $border-light;
+  font-size: 0.9rem;
+
+  a {
+    color: $text-mid;
+
+    &:hover {
+      color: $iridescent-purple;
+    }
+  }
+}
+
+.pagination-info {
+  color: $text-light;
+}
+
+// Footer
+.site-footer {
+  background: $iridescent-purple;
+  color: $gray-pale;
+  padding: 2rem;
+  margin-top: 3rem;
+  font-size: 0.85rem;
+}
+
+.footer-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-links {
+  a {
+    color: $gray-pale;
+    margin-left: 1.25rem;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+}
+
+// Inline Flickr embed (for use within post content)
+.flickr-embed {
+  margin: 1.5rem 0;
+
+  img {
+    border-radius: 3px;
+  }
+
+  figcaption {
+    font-size: 0.85rem;
+    color: $text-light;
+    margin-top: 0.5rem;
+    font-style: italic;
+  }
+}
+
+// Responsive
+@media (max-width: 640px) {
+  .site-header {
+    padding: 1rem 1.25rem;
+  }
+
+  .site-main {
+    padding: 1.25rem;
+  }
+
+  .photo-card-info {
+    padding: 0.75rem 1rem 1rem;
+  }
+
+  .post-title {
+    font-size: 1.4rem;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+
+  .footer-links a {
+    margin: 0 0.6rem;
+  }
+}

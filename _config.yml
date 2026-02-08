@@ -1,0 +1,26 @@
+title: Pigeon Town
+description: >-
+  A photoblog about pigeons, around the city and elsewhere.
+baseurl: "" # set to repo name for GitHub Pages, e.g. /pigeon-town
+url: "" # set to your GitHub Pages URL, e.g. https://username.github.io
+
+# Flickr
+flickr_username: blackavar21
+
+# Build settings
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+
+# Pagination
+paginate: 5
+paginate_path: "/page/:num/"
+
+# Permalink style — clean URLs
+permalink: /:year/:month/:day/:title/
+
+# Exclude dev files from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md

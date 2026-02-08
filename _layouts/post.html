@@ -1,0 +1,43 @@
+---
+layout: default
+---
+
+<article class="post">
+  <div class="post-photo">
+    {% if page.flickr_id %}
+    <a href="https://www.flickr.com/photos/{{ site.flickr_username }}/{{ page.flickr_id }}" target="_blank" rel="noopener">
+      <img
+        src="https://live.staticflickr.com/{{ page.flickr_server }}/{{ page.flickr_id }}_{{ page.flickr_secret }}_b.jpg"
+        alt="{{ page.title }}"
+        loading="lazy">
+    </a>
+    {% endif %}
+  </div>
+
+  <div class="post-info">
+    <h1 class="post-title">{{ page.title }}</h1>
+    <div class="post-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
+      {% if page.location %}
+      <span class="location">{{ page.location }}</span>
+      {% endif %}
+    </div>
+
+    {% if page.content != "" %}
+    <div class="post-content">
+      {{ content }}
+    </div>
+    {% endif %}
+
+    <a href="https://www.flickr.com/photos/{{ site.flickr_username }}/{{ page.flickr_id }}" class="flickr-link" target="_blank" rel="noopener">View on Flickr</a>
+  </div>
+
+  <nav class="post-nav">
+    {% if page.previous.url %}
+    <a href="{{ page.previous.url | relative_url }}" class="post-nav-prev">&larr; {{ page.previous.title }}</a>
+    {% endif %}
+    {% if page.next.url %}
+    <a href="{{ page.next.url | relative_url }}" class="post-nav-next">{{ page.next.title }} &rarr;</a>
+    {% endif %}
+  </nav>
+</article>
