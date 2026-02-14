@@ -21,9 +21,9 @@ permalink: /tags/
       {% for post in tag[1] %}
       <li>
         <a href="{{ post.url | relative_url }}">
-          {% if post.flickr_id %}
+          {% if post.flickr_img %}
           <img
-            src="https://live.staticflickr.com/{{ post.flickr_server }}/{{ post.flickr_id }}_{{ post.flickr_secret }}_q.jpg"
+            src="{{ post.flickr_img }}"
             alt="{{ post.title }}"
             class="tag-thumb">
           {% endif %}

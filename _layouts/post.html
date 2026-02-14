@@ -4,10 +4,10 @@ layout: default
 
 <article class="post">
   <div class="post-photo">
-    {% if page.flickr_id %}
+    {% if page.flickr_img %}
     <a href="https://www.flickr.com/photos/{{ site.flickr_username }}/{{ page.flickr_id }}" target="_blank" rel="noopener">
       <img
-        src="https://live.staticflickr.com/{{ page.flickr_server }}/{{ page.flickr_id }}_{{ page.flickr_secret }}_b.jpg"
+        src="{{ page.flickr_img }}"
         alt="{{ page.title }}"
         loading="lazy">
     </a>

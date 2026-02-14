@@ -1,12 +1,12 @@
 {% comment %}
   Flickr photo embed include.
   Usage in a post:
-    {% include flickr.html id="12345678901" server="65535" secret="abc1234def" alt="A pigeon on a bench" %}
+    {% include flickr.html img="https://live.staticflickr.com/65535/12345_abc123_b.jpg" id="12345" alt="A pigeon on a bench" %}
 {% endcomment %}
 <figure class="flickr-embed">
   <a href="https://www.flickr.com/photos/{{ site.flickr_username }}/{{ include.id }}" target="_blank" rel="noopener">
     <img
-      src="https://live.staticflickr.com/{{ include.server }}/{{ include.id }}_{{ include.secret }}_b.jpg"
+      src="{{ include.img }}"
       alt="{{ include.alt | default: 'Photo' }}"
       loading="lazy">
   </a>

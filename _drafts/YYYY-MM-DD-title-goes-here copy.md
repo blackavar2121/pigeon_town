@@ -1,11 +1,10 @@
 ---
 layout: post
-title: "Trio"
-date: 2026-02-16
+title: ""
+date: YYYY-MM-DD
 location: ""
-flickr_id: "55095738298"
-flickr_server: "65535"
-flickr_secret: "8cac671fc4"
-tags: [nyc, winter]
+flickr_img: ""
+flickr_id: ""
+tags: []
 ---
 
