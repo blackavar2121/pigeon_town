@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Trio"
-date: 2026-02-16
+date: 2026-02-14
 location: ""
 flickr_id: ""
 flickr_server: ""
